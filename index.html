@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Development meeting for the SmartHome AI Project">
+    <title>SmartHome AI Project Minutes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>SmartHome AI: Integration Sync</h1>
+        <h2>Topic: Automated Environment Control</h2>
+        <h3>Tuesday, April 14, 2026</h3>
+        <nav>
+            <a href="#attendance">Attendance</a> | 
+            <a href="#agenda">Agenda</a> | 
+            <a href="#recordings">Media</a> | 
+            <a href="#feedback">Developer Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="attendance">
+            <h2>Attendance List</h2>
+            <div> <ul>
+                    <li><strong>Dr. Jane Smith</strong> - Lead Engineer</li>
+                    <li><strong>Marcus Vane</strong> - UX Designer</li>
+                    <li><span>Internees</span> - Observing only</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr> <section id="agenda">
+            <h2>Meeting Agenda</h2>
+            <ol>
+                <li>Review <b>Local LLM</b> latency issues.</li>
+                <li>Finalize <em>Voice Recognition</em> triggers.</li>
+                <li>Security audit of IoT bridge.</li>
+            </ol>
+        </section>
+
+        <section id="updates">
+            <h2>Business Progress</h2>
+            <h3>Unfinished Business</h3>
+            <p>The bug where the smart fridge orders 500 gallons of milk is still being investigated by the backend team.</p>
+
+            <h3>New Business</h3>
+            <p>We are starting the alpha phase for the "Morning Mood" light automation.</p>
+        </section>
+
+        <section id="recordings">
+            <h2>Multimedia Evidence</h2>
+            <p>Logic Diagram for Smart Thermostat:</p>
+            <img src="diagram.jpg" alt="A flowchart of the AI temperature logic" width="400">
+
+            <p>Audio recording of the brainstorming session:</p>
+            <audio controls src="meeting-audio.mp3">
+                Your browser does not support audio.
+            </audio>
+
+            <p>Video demonstration of the voice command system:</p>
+            <video controls width="480" src="demo-video.mp4">
+                Your browser does not support video.
+            </video>
+        </section>
+
+        <section><h2>Miscellaneous</h2>
+            <details>
+                <summary>Click to view Technical Concerns</summary>
+                <p>There is a concern that the AI is learning to ignore "Off" commands if it thinks the user is having too much fun.</p>
+            </details>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer id="feedback">
+        <h2>Developer Feedback Form</h2>
+        <form action="#">
+            <fieldset>
+                <legend>System Update Survey</legend>
+                
+                <p>Developer Name: <input type="text" name="dev-name" required></p>
+                
+                <p>Date of Review: <input type="date" name="review-date"></p>
+
+                <p>Is the AI model stable?</p>
+                <input type="radio" id="stable" name="status" value="stable">
+                <label for="stable">Stable</label><br>
+                <input type="radio" id="unstable" name="status" value="unstable">
+                <label for="unstable">Needs Training</label>
+
+                <p>Modules tested (Check all that apply):</p>
+                <input type="checkbox" id="lights" name="module" value="lighting">
+                <label for="lights">Smart Lighting</label><br>
+                <input type="checkbox" id="audio" name="module" value="sound">
+                <label for="audio">Spatial Audio</label>
+
+                <p>Select Hardware Version:</p>
+                <select name="hardware">
+                    <option value="v1">Prototype v1</option>
+                    <option value="v2">Production v2</option>
+                    <option value="v3">Experimental v3</option>
+                </select>
+
+                <p>Primary Training Language:</p>
+                <input list="languages" name="lang">
+                <datalist id="languages">
+                    <option value="Python">
+                    <option value="C++">
+                    <option value="Rust">
+                </datalist>
+
+                <p>Brief summary of bugs:</p>
+                <textarea name="bugs" rows="3" cols="40" placeholder="Describe issues..."></textarea>
+
+                <br><br>
+                <button type="submit">Submit Report</button>
+            </fieldset>
+        </form>
+        <p><small>&copy; 2026 SmartHome AI Labs. Written in valid HTML.</small></p>
+    </footer>
+
+</body>
+</html>
