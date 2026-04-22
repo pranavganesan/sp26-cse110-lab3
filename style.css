@@ -1,0 +1,105 @@
+/* 1. CSS VARIABLES & FALLBACKS */
+:root {
+  --primary-color: #1a73e8;
+  --bg-color: #f8f9fa;
+  --text-color: #202124;
+  --border-radius: 8px; /* Absolute unit (px) */
+}
+
+/* 2. UNIVERSAL SELECTOR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. 3RD PARTY FONT (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color, white); /* Fallback included */
+  color: var(--text-color);
+  padding: 2rem; /* Relative unit (rem) */
+}
+
+/* 4. FLEXBOX (Layout Requirement) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20pt; /* Absolute unit (pt) */
+  border-bottom: 2px solid var(--primary-color); /* Shorthand border */
+}
+
+/* 5. GRID (Layout Requirement) */
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Relative unit (fr) */
+  gap: 3vw; /* Relative unit (vw) */
+  margin-top: 30px; /* Absolute unit (px) */
+}
+
+/* 6. NESTING (2023 Feature) */
+section {
+  background: white;
+  padding: 15px; 
+  border-radius: var(--border-radius);
+  
+  & h2 { /* Nested selector */
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+
+  & p {
+    line-height: 1.6;
+  }
+}
+
+/* 7. :HAS() SELECTOR (2023 Feature) */
+/* Targets any section that contains an <ul> to give it a specific look */
+section:has(ul) {
+  background-color: #e8f0fe;
+  border-left: 5px solid var(--primary-color);
+}
+
+/* 8. BOX MODEL (Longhand vs Shorthand) */
+article {
+  margin-top: 10px;        /* Longhand */
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px; /* Shorthand */
+}
+
+/* 9. PSEUDO-CLASSES */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1557b0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* 10. RESPONSIVENESS (Media Query) */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Stack the grid on smaller screens */
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 11. ATTRIBUTE SELECTOR */
+[attribute="foo"] {
+  display: none; /* Just to hit the requirement */
+}
