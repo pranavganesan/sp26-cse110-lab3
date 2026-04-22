@@ -21,6 +21,7 @@ body {
   background-color: var(--bg-color, white); /* Fallback included */
   color: var(--text-color);
   padding: 2rem; /* Relative unit (rem) */
+  display: block; /* Display value 1 */
 }
 
 /* 4. FLEXBOX (Layout Requirement) */
@@ -30,6 +31,7 @@ header {
   align-items: center;
   padding-bottom: 20pt; /* Absolute unit (pt) */
   border-bottom: 2px solid var(--primary-color); /* Shorthand border */
+  position: relative; /* Position value 1 */
 }
 
 /* 5. GRID (Layout Requirement) */
@@ -57,26 +59,36 @@ section {
 }
 
 /* 7. :HAS() SELECTOR (2023 Feature) */
-/* Targets any section that contains an <ul> to give it a specific look */
 section:has(ul) {
   background-color: #e8f0fe;
   border-left: 5px solid var(--primary-color);
 }
 
-/* 8. BOX MODEL (Longhand vs Shorthand) */
+/* 8. COMBINATORS (Requirement #2 under Selectors) */
+section p { color: var(--text-color); }       /* Descendant */
+section > h2 { margin-bottom: 10px; }         /* Child */
+h2 ~ p { font-size: 1rem; }                   /* General Sibling */
+h1 + h2 { margin-top: 5px; }                  /* Adjacent Sibling */
+
+/* 9. BOX MODEL (Longhand vs Shorthand) */
 article {
-  margin-top: 10px;        /* Longhand */
+  margin-top: 10px;               /* Longhand */
   margin-bottom: 10px;
-  padding: 10px 20px 10px 20px; /* Shorthand */
+  padding: 10px 20px 10px 20px;   /* Shorthand */
+  border: 1px solid #ccc;         /* Shorthand */
+  border-width: 1px;              /* Longhand example */
+  border-style: solid;
+  border-color: #eee;
 }
 
-/* 9. PSEUDO-CLASSES */
+/* 10. PSEUDO-CLASSES & DISPLAY VARIETY */
 button {
   background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  display: inline-block; /* Display value 2 */
 }
 
 button:hover {
@@ -87,19 +99,19 @@ button:active {
   transform: scale(0.98);
 }
 
-/* 10. RESPONSIVENESS (Media Query) */
+/* 11. RESPONSIVENESS (Media Query) */
 @media (max-width: 768px) {
   main {
-    grid-template-columns: 1fr; /* Stack the grid on smaller screens */
+    grid-template-columns: 1fr;
   }
-  
   header {
     flex-direction: column;
     text-align: center;
   }
 }
 
-/* 11. ATTRIBUTE SELECTOR */
+/* 12. ATTRIBUTE SELECTOR & POSITION VARIETY */
 [attribute="foo"] {
-  display: none; /* Just to hit the requirement */
+  display: none;
+  position: static; /* Position value 2 */
 }
