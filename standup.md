@@ -11,5 +11,3 @@
 - Use new 2023 CSS selectors (:has and nesting).
 - Validate CSS and submit to Gradescope.
 
-**Blockers:**
-- Tight deadline between solo lab and Group 25 project.
