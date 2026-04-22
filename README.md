@@ -1,5 +1,5 @@
-# Lab 2 - Starter
+# Lab 3 - CSS and Agile
 
-This repository contains the deliverables for CSE 110 Lab 2, featuring a semantic HTML meeting minutes page for the 'SmartHome AI' project and a completed scavenger hunt using Chrome DevTools.
+This repository contains the deliverables for CSE 110 Lab 3, building upon the 'SmartHome AI' project. It features an aesthetic layer implemented with CSS (Flexbox, Grid, and 2023 selectors) and demonstrates a professional Agile workflow using GitHub Issues, branching, and Pull Requests.
 
-Live Site: https://pranavganesan.github.io/Lab2_Starter/
+Live Site: https://pranavganesan.github.io/Lab2_Starter/](https://pranavganesan.github.io/sp26-cse110-lab3/
